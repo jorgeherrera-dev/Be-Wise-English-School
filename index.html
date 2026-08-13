@@ -1,0 +1,3163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Be Wise English School: programas de inglés para niños, adultos, profesionales e instructores, desde Kids hasta nivel C1.">
+  <meta name="theme-color" content="#0b1f3a">
+  <title>Be Wise English School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy-950: #07172d;
+      --navy-900: #0b1f3a;
+      --navy-800: #12345b;
+      --blue-700: #1557a7;
+      --blue-600: #1b67c9;
+      --blue-100: #eaf3ff;
+      --blue-50: #f4f8ff;
+      --gold-500: #f6c445;
+      --gold-400: #ffd768;
+      --gold-100: #fff3c7;
+      --cream: #fffdf7;
+      --white: #ffffff;
+      --ink: #12233b;
+      --muted: #5d6b7d;
+      --line: #dfe7f0;
+      --success: #14805e;
+      --shadow-sm: 0 12px 36px rgba(7, 23, 45, 0.08);
+      --shadow-md: 0 24px 70px rgba(7, 23, 45, 0.13);
+      --radius-sm: 14px;
+      --radius-md: 22px;
+      --radius-lg: 34px;
+      --container: 1200px;
+      --header-height: 78px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--header-height) + 28px);
+    }
+
+    body {
+      margin: 0;
+      min-width: 280px;
+      overflow-x: hidden;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "Plus Jakarta Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      text-rendering: optimizeLegibility;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button,
+    a {
+      font: inherit;
+    }
+
+    button {
+      color: inherit;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    ::selection {
+      background: var(--gold-400);
+      color: var(--navy-950);
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--gold-500);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 1000;
+      transform: translateY(-160%);
+      border-radius: 10px;
+      background: var(--white);
+      color: var(--navy-900);
+      padding: 10px 16px;
+      font-weight: 700;
+      box-shadow: var(--shadow-sm);
+      transition: transform 180ms ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--container));
+      margin-inline: auto;
+    }
+
+    .section {
+      position: relative;
+      padding-block: clamp(76px, 9vw, 128px);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: clamp(34px, 5vw, 58px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 15px;
+      color: var(--blue-700);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 24px;
+      height: 3px;
+      border-radius: 999px;
+      background: var(--gold-500);
+      content: "";
+    }
+
+    .eyebrow.on-dark {
+      color: var(--gold-400);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--navy-900);
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin-bottom: 24px;
+      font-size: clamp(2.65rem, 5.7vw, 5.65rem);
+      font-weight: 800;
+      letter-spacing: -0.06em;
+    }
+
+    h2 {
+      margin-bottom: 18px;
+      font-size: clamp(2rem, 4vw, 3.65rem);
+      font-weight: 800;
+    }
+
+    h3 {
+      font-size: clamp(1.15rem, 2vw, 1.55rem);
+      font-weight: 750;
+    }
+
+    .section-lead {
+      max-width: 660px;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.6vw, 1.16rem);
+    }
+
+    .text-accent {
+      position: relative;
+      display: inline-block;
+      color: var(--blue-700);
+      isolation: isolate;
+    }
+
+    .text-accent::after {
+      position: absolute;
+      right: -2px;
+      bottom: 0.06em;
+      left: -2px;
+      z-index: -1;
+      height: 0.22em;
+      border-radius: 999px;
+      background: var(--gold-400);
+      content: "";
+      transform: rotate(-1deg);
+    }
+
+    .btn {
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      padding: 13px 22px;
+      font-weight: 750;
+      line-height: 1.2;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--gold-500);
+      color: var(--navy-950);
+      box-shadow: 0 13px 26px rgba(246, 196, 69, 0.24);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-400);
+      box-shadow: 0 17px 32px rgba(246, 196, 69, 0.32);
+    }
+
+    .btn-secondary {
+      border-color: rgba(18, 52, 91, 0.18);
+      background: rgba(255, 255, 255, 0.78);
+      color: var(--navy-900);
+      box-shadow: 0 8px 24px rgba(7, 23, 45, 0.06);
+      backdrop-filter: blur(12px);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--blue-600);
+      background: var(--white);
+    }
+
+    .btn-dark {
+      background: var(--navy-900);
+      color: var(--white);
+      box-shadow: 0 14px 30px rgba(7, 23, 45, 0.2);
+    }
+
+    .btn-dark:hover {
+      background: var(--navy-800);
+    }
+
+    .arrow {
+      display: inline-block;
+      font-size: 1.16em;
+      transition: transform 180ms ease;
+    }
+
+    .btn:hover .arrow,
+    .course-card:hover .course-arrow {
+      transform: translateX(4px);
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(18, 52, 91, 0.1);
+      background: rgba(255, 253, 247, 0.88);
+      backdrop-filter: blur(18px);
+      transition: box-shadow 200ms ease, background 200ms ease;
+    }
+
+    .site-header.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 10px 35px rgba(7, 23, 45, 0.08);
+    }
+
+    .nav-shell {
+      display: flex;
+      min-height: var(--header-height);
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: inline-flex;
+      min-width: 0;
+      align-items: center;
+      gap: 12px;
+      color: var(--navy-900);
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 52px;
+      height: 52px;
+      flex: 0 0 auto;
+      border: 1px solid rgba(18, 52, 91, 0.1);
+      border-radius: 15px;
+      background: var(--white);
+      object-fit: contain;
+      padding: 3px;
+      box-shadow: 0 8px 22px rgba(7, 23, 45, 0.09);
+    }
+
+    .brand-copy {
+      display: grid;
+      line-height: 1.05;
+    }
+
+    .brand-copy strong {
+      font-size: 1.02rem;
+      letter-spacing: -0.035em;
+    }
+
+    .brand-copy span {
+      margin-top: 5px;
+      color: var(--blue-700);
+      font-size: 0.67rem;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-link {
+      position: relative;
+      color: #34465d;
+      font-size: 0.91rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .nav-link::after {
+      position: absolute;
+      right: 0;
+      bottom: -9px;
+      left: 0;
+      height: 2px;
+      border-radius: 99px;
+      background: var(--gold-500);
+      content: "";
+      transform: scaleX(0);
+      transition: transform 180ms ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--navy-900);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      transform: scaleX(1);
+    }
+
+    .nav-cta {
+      min-height: 44px;
+      padding: 10px 18px;
+      font-size: 0.88rem;
+    }
+
+    .nav-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: var(--white);
+      cursor: pointer;
+    }
+
+    .nav-toggle-lines,
+    .nav-toggle-lines::before,
+    .nav-toggle-lines::after {
+      display: block;
+      width: 20px;
+      height: 2px;
+      border-radius: 99px;
+      background: var(--navy-900);
+      transition: transform 180ms ease, opacity 180ms ease;
+    }
+
+    .nav-toggle-lines {
+      position: relative;
+    }
+
+    .nav-toggle-lines::before,
+    .nav-toggle-lines::after {
+      position: absolute;
+      left: 0;
+      content: "";
+    }
+
+    .nav-toggle-lines::before {
+      top: -6px;
+    }
+
+    .nav-toggle-lines::after {
+      top: 6px;
+    }
+
+    .nav-toggle[aria-expanded="true"] .nav-toggle-lines {
+      background: transparent;
+    }
+
+    .nav-toggle[aria-expanded="true"] .nav-toggle-lines::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    .nav-toggle[aria-expanded="true"] .nav-toggle-lines::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding-block: clamp(54px, 8vw, 104px) clamp(78px, 10vw, 132px);
+      background:
+        radial-gradient(circle at 8% 20%, rgba(255, 215, 104, 0.23), transparent 25%),
+        radial-gradient(circle at 91% 10%, rgba(27, 103, 201, 0.16), transparent 31%),
+        linear-gradient(135deg, #fffdf7 0%, #f4f8ff 58%, #edf5ff 100%);
+    }
+
+    .hero::before {
+      position: absolute;
+      top: -270px;
+      right: -210px;
+      z-index: -1;
+      width: 620px;
+      height: 620px;
+      border: 1px solid rgba(21, 87, 167, 0.12);
+      border-radius: 50%;
+      content: "";
+      box-shadow: 0 0 0 54px rgba(21, 87, 167, 0.035), 0 0 0 108px rgba(21, 87, 167, 0.025);
+    }
+
+    .hero-grid {
+      display: grid;
+      align-items: center;
+      gap: clamp(48px, 7vw, 88px);
+      grid-template-columns: minmax(0, 1.02fr) minmax(390px, 0.98fr);
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 3;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(21, 87, 167, 0.16);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      padding: 8px 13px 8px 8px;
+      color: var(--blue-700);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.065em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 30px rgba(7, 23, 45, 0.05);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-kicker-mark {
+      display: grid;
+      width: 28px;
+      height: 28px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--gold-500);
+      color: var(--navy-950);
+      font-size: 0.85rem;
+    }
+
+    .hero-copy > p {
+      max-width: 630px;
+      margin-bottom: 30px;
+      color: #506078;
+      font-size: clamp(1.05rem, 1.8vw, 1.22rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 22px;
+      margin: 30px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-highlights li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #42546a;
+      font-size: 0.86rem;
+      font-weight: 650;
+    }
+
+    .hero-highlights li::before {
+      display: grid;
+      width: 20px;
+      height: 20px;
+      place-items: center;
+      border-radius: 50%;
+      background: #dcf5eb;
+      color: var(--success);
+      content: "✓";
+      font-size: 0.72rem;
+      font-weight: 900;
+    }
+
+    .hero-visual {
+      position: relative;
+      z-index: 2;
+      min-width: 0;
+    }
+
+    .hero-photo-shell {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1.02 / 1;
+      border: 8px solid rgba(255, 255, 255, 0.86);
+      border-radius: 46% 54% 45% 55% / 44% 42% 58% 56%;
+      background: var(--blue-100);
+      box-shadow: var(--shadow-md);
+      transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+      transition: transform 240ms ease;
+    }
+
+    .hero-photo-shell::after {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 65%, rgba(7, 23, 45, 0.18));
+      content: "";
+      pointer-events: none;
+    }
+
+    .hero-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 68% center;
+      transform: scale(1.02);
+    }
+
+    .floating-card {
+      position: absolute;
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      border: 1px solid rgba(255, 255, 255, 0.86);
+      border-radius: 17px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 11px 15px 11px 11px;
+      box-shadow: 0 18px 48px rgba(7, 23, 45, 0.16);
+      color: var(--navy-900);
+      font-size: 0.78rem;
+      font-weight: 800;
+      line-height: 1.2;
+      backdrop-filter: blur(13px);
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .floating-card::before {
+      display: grid;
+      width: 35px;
+      height: 35px;
+      flex: 0 0 auto;
+      place-items: center;
+      border-radius: 11px;
+      background: var(--gold-500);
+      content: attr(data-icon);
+      color: var(--navy-950);
+      font-size: 0.77rem;
+      font-weight: 900;
+    }
+
+    .floating-card small {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.68rem;
+      font-weight: 650;
+    }
+
+    .floating-card.one {
+      top: 10%;
+      left: -8%;
+    }
+
+    .floating-card.two {
+      right: -7%;
+      bottom: 12%;
+      animation-delay: -2.2s;
+    }
+
+    .hero-word {
+      position: absolute;
+      z-index: 1;
+      color: rgba(21, 87, 167, 0.12);
+      font-size: clamp(1.25rem, 2.3vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      user-select: none;
+      animation: drift 8s ease-in-out infinite;
+    }
+
+    .hero-word.hello {
+      top: 14%;
+      right: 3%;
+      transform: rotate(8deg);
+    }
+
+    .hero-word.welcome {
+      right: 38%;
+      bottom: 8%;
+      animation-delay: -3s;
+      transform: rotate(-7deg);
+    }
+
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0) rotate(-1deg);
+      }
+      50% {
+        transform: translateY(-10px) rotate(1deg);
+      }
+    }
+
+    @keyframes drift {
+      0%,
+      100% {
+        translate: 0 0;
+      }
+      50% {
+        translate: 0 -12px;
+      }
+    }
+
+    /* Quick paths */
+    .quick-paths {
+      position: relative;
+      z-index: 10;
+      margin-top: -47px;
+    }
+
+    .quick-paths-grid {
+      display: grid;
+      overflow: hidden;
+      border: 1px solid rgba(18, 52, 91, 0.1);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: var(--shadow-sm);
+      grid-template-columns: repeat(4, 1fr);
+      backdrop-filter: blur(15px);
+    }
+
+    .quick-path {
+      position: relative;
+      display: flex;
+      min-height: 118px;
+      align-items: center;
+      gap: 14px;
+      padding: 22px;
+    }
+
+    .quick-path + .quick-path {
+      border-left: 1px solid var(--line);
+    }
+
+    .quick-path-number {
+      display: grid;
+      width: 45px;
+      height: 45px;
+      flex: 0 0 auto;
+      place-items: center;
+      border-radius: 14px;
+      background: var(--blue-50);
+      color: var(--blue-700);
+      font-size: 0.78rem;
+      font-weight: 850;
+      transition: background 180ms ease, transform 180ms ease;
+    }
+
+    .quick-path:hover .quick-path-number {
+      background: var(--gold-500);
+      color: var(--navy-950);
+      transform: rotate(-4deg) scale(1.05);
+    }
+
+    .quick-path strong {
+      display: block;
+      color: var(--navy-900);
+      font-size: 0.91rem;
+    }
+
+    .quick-path span:last-child {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.75rem;
+      line-height: 1.4;
+    }
+
+    /* Programs */
+    .programs {
+      background:
+        linear-gradient(rgba(21, 87, 167, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(21, 87, 167, 0.035) 1px, transparent 1px),
+        var(--cream);
+      background-size: 34px 34px;
+    }
+
+    .program-toolbar {
+      display: flex;
+      overflow-x: auto;
+      margin-bottom: 28px;
+      gap: 8px;
+      padding: 6px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--white);
+      scrollbar-width: none;
+      box-shadow: 0 8px 28px rgba(7, 23, 45, 0.05);
+    }
+
+    .program-toolbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .program-tab {
+      min-width: max-content;
+      flex: 1 0 auto;
+      border: 0;
+      border-radius: 13px;
+      background: transparent;
+      padding: 12px 17px;
+      color: #58677a;
+      font-size: 0.85rem;
+      font-weight: 750;
+      cursor: pointer;
+      transition: color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+    }
+
+    .program-tab:hover {
+      color: var(--navy-900);
+      background: var(--blue-50);
+    }
+
+    .program-tab[aria-selected="true"] {
+      background: var(--navy-900);
+      color: var(--white);
+      box-shadow: 0 8px 18px rgba(7, 23, 45, 0.2);
+    }
+
+    .program-layout {
+      display: grid;
+      align-items: start;
+      gap: 24px;
+      grid-template-columns: minmax(0, 1fr) minmax(340px, 0.72fr);
+    }
+
+    .noscript-note {
+      margin: 0 0 24px;
+      border: 1px solid rgba(21, 87, 167, 0.2);
+      border-radius: 16px;
+      background: var(--blue-50);
+      padding: 18px 20px;
+      color: var(--navy-800);
+      font-size: 0.88rem;
+    }
+
+    .course-list {
+      display: grid;
+      gap: 13px;
+    }
+
+    .course-card {
+      position: relative;
+      display: grid;
+      width: 100%;
+      min-width: 0;
+      align-items: center;
+      gap: 15px;
+      grid-template-columns: 50px minmax(0, 1fr) 34px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.94);
+      padding: 15px;
+      color: var(--ink);
+      text-align: left;
+      cursor: pointer;
+      box-shadow: 0 7px 24px rgba(7, 23, 45, 0.045);
+      transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
+
+    .course-card:hover {
+      border-color: rgba(21, 87, 167, 0.3);
+      box-shadow: 0 13px 35px rgba(7, 23, 45, 0.09);
+      transform: translateY(-2px);
+    }
+
+    .course-card.active {
+      border-color: var(--blue-600);
+      background: var(--blue-50);
+      box-shadow: 0 14px 38px rgba(21, 87, 167, 0.12);
+    }
+
+    .course-code {
+      display: grid;
+      width: 50px;
+      height: 50px;
+      place-items: center;
+      border-radius: 15px;
+      background: var(--gold-100);
+      color: var(--navy-900);
+      font-size: 0.78rem;
+      font-weight: 850;
+      letter-spacing: -0.02em;
+      transition: background 180ms ease, color 180ms ease;
+    }
+
+    .course-card.active .course-code {
+      background: var(--navy-900);
+      color: var(--white);
+    }
+
+    .course-name {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--navy-900);
+      font-size: clamp(0.91rem, 1.4vw, 1rem);
+      font-weight: 750;
+      line-height: 1.35;
+    }
+
+    .course-meta {
+      display: block;
+      overflow: hidden;
+      color: var(--muted);
+      font-size: 0.76rem;
+      line-height: 1.4;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .course-arrow {
+      display: grid;
+      width: 32px;
+      height: 32px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--blue-50);
+      color: var(--blue-700);
+      font-weight: 800;
+      transition: transform 180ms ease, background 180ms ease;
+    }
+
+    .course-card.active .course-arrow {
+      background: var(--gold-500);
+      color: var(--navy-950);
+    }
+
+    .course-detail {
+      position: sticky;
+      top: calc(var(--header-height) + 24px);
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      background: var(--navy-900);
+      color: rgba(255, 255, 255, 0.8);
+      box-shadow: var(--shadow-md);
+    }
+
+    .course-detail::before {
+      position: absolute;
+      top: -120px;
+      right: -100px;
+      width: 250px;
+      height: 250px;
+      border: 55px solid rgba(255, 255, 255, 0.035);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .course-detail-inner {
+      position: relative;
+      z-index: 1;
+      padding: clamp(28px, 4vw, 42px);
+    }
+
+    .course-detail.swap .course-detail-inner {
+      animation: detailIn 280ms ease both;
+    }
+
+    @keyframes detailIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .detail-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 23px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.09);
+      padding: 7px 11px;
+      color: var(--gold-400);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .detail-badge::before {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold-500);
+      content: "";
+      box-shadow: 0 0 0 4px rgba(246, 196, 69, 0.12);
+    }
+
+    .course-detail h3 {
+      margin-bottom: 16px;
+      color: var(--white);
+      font-size: clamp(1.55rem, 3vw, 2.35rem);
+    }
+
+    .course-detail p {
+      margin-bottom: 24px;
+      color: rgba(255, 255, 255, 0.73);
+      font-size: 0.95rem;
+    }
+
+    .detail-list {
+      display: grid;
+      margin: 0 0 29px;
+      gap: 12px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .detail-list li {
+      display: grid;
+      align-items: start;
+      gap: 10px;
+      grid-template-columns: 22px 1fr;
+      color: rgba(255, 255, 255, 0.87);
+      font-size: 0.86rem;
+    }
+
+    .detail-list li::before {
+      display: grid;
+      width: 20px;
+      height: 20px;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(246, 196, 69, 0.15);
+      color: var(--gold-400);
+      content: "✓";
+      font-size: 0.68rem;
+      font-weight: 900;
+    }
+
+    .detail-note {
+      margin-top: 16px;
+      margin-bottom: 0 !important;
+      color: rgba(255, 255, 255, 0.52) !important;
+      font-size: 0.7rem !important;
+    }
+
+    /* Method */
+    .method {
+      overflow: hidden;
+      background: var(--navy-950);
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .method::before {
+      position: absolute;
+      top: -30%;
+      left: -15%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(27, 103, 201, 0.25), transparent 68%);
+      content: "";
+    }
+
+    .method .section-heading {
+      position: relative;
+      z-index: 1;
+    }
+
+    .method h2 {
+      color: var(--white);
+    }
+
+    .method .section-lead {
+      color: rgba(255, 255, 255, 0.67);
+    }
+
+    .method-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .method-grid::before {
+      position: absolute;
+      top: 38px;
+      right: 12%;
+      left: 12%;
+      z-index: -1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(246, 196, 69, 0.46), transparent);
+      content: "";
+    }
+
+    .method-card {
+      min-height: 285px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.045);
+      padding: 28px;
+      backdrop-filter: blur(12px);
+      transition: transform 200ms ease, background 200ms ease, border-color 200ms ease;
+    }
+
+    .method-card:hover {
+      border-color: rgba(246, 196, 69, 0.4);
+      background: rgba(255, 255, 255, 0.07);
+      transform: translateY(-6px);
+    }
+
+    .method-number {
+      display: grid;
+      width: 58px;
+      height: 58px;
+      margin-bottom: 44px;
+      place-items: center;
+      border: 1px solid rgba(246, 196, 69, 0.4);
+      border-radius: 18px;
+      background: var(--navy-900);
+      color: var(--gold-400);
+      font-size: 0.82rem;
+      font-weight: 850;
+      box-shadow: 0 0 0 8px var(--navy-950);
+    }
+
+    .method-card h3 {
+      margin-bottom: 11px;
+      color: var(--white);
+      font-size: 1.16rem;
+    }
+
+    .method-card p {
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, 0.61);
+      font-size: 0.86rem;
+    }
+
+    /* About */
+    .about {
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      align-items: center;
+      gap: clamp(48px, 8vw, 100px);
+      grid-template-columns: minmax(320px, 0.84fr) minmax(0, 1.16fr);
+    }
+
+    .about-card {
+      position: relative;
+      min-height: 510px;
+    }
+
+    .about-card-main {
+      position: absolute;
+      inset: 0 8% 8% 0;
+      display: grid;
+      overflow: hidden;
+      place-items: center;
+      border-radius: 42px 42px 120px 42px;
+      background:
+        radial-gradient(circle at 20% 18%, rgba(255, 215, 104, 0.36), transparent 28%),
+        linear-gradient(145deg, var(--blue-50), #dcecff);
+      box-shadow: var(--shadow-md);
+    }
+
+    .about-card-main::before {
+      position: absolute;
+      inset: 34px;
+      border: 1px dashed rgba(21, 87, 167, 0.19);
+      border-radius: 29px 29px 98px 29px;
+      content: "";
+    }
+
+    .about-logo {
+      position: relative;
+      z-index: 1;
+      width: min(66%, 270px);
+      aspect-ratio: 1;
+      border-radius: 28px;
+      background: var(--white);
+      object-fit: contain;
+      padding: 12px;
+      box-shadow: 0 20px 55px rgba(7, 23, 45, 0.14);
+      transform: rotate(-2deg);
+    }
+
+    .about-mini-card {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      max-width: 225px;
+      border-radius: 20px;
+      background: var(--navy-900);
+      padding: 20px 22px;
+      color: var(--white);
+      box-shadow: var(--shadow-md);
+    }
+
+    .about-mini-card strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--gold-400);
+      font-size: 1rem;
+    }
+
+    .about-mini-card span {
+      display: block;
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 0.76rem;
+    }
+
+    .about-copy h2 {
+      max-width: 680px;
+    }
+
+    .about-copy > p {
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .value-grid {
+      display: grid;
+      margin-top: 32px;
+      gap: 12px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .value-card {
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: var(--cream);
+      padding: 18px;
+      transition: border-color 180ms ease, transform 180ms ease;
+    }
+
+    .value-card:hover {
+      border-color: rgba(21, 87, 167, 0.35);
+      transform: translateY(-3px);
+    }
+
+    .value-dot {
+      display: block;
+      width: 24px;
+      height: 5px;
+      margin-bottom: 14px;
+      border-radius: 999px;
+      background: var(--gold-500);
+    }
+
+    .value-card strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--navy-900);
+      font-size: 0.88rem;
+    }
+
+    .value-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.75rem;
+      line-height: 1.5;
+    }
+
+    /* FAQ */
+    .faq {
+      background: var(--blue-50);
+    }
+
+    .faq-grid {
+      display: grid;
+      align-items: start;
+      gap: clamp(38px, 7vw, 88px);
+      grid-template-columns: minmax(270px, 0.72fr) minmax(0, 1.28fr);
+    }
+
+    .faq .section-heading {
+      position: sticky;
+      top: calc(var(--header-height) + 28px);
+      margin-bottom: 0;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .faq-item {
+      overflow: hidden;
+      border: 1px solid rgba(18, 52, 91, 0.1);
+      border-radius: 17px;
+      background: var(--white);
+      box-shadow: 0 8px 25px rgba(7, 23, 45, 0.04);
+    }
+
+    .faq-item summary {
+      position: relative;
+      padding: 21px 58px 21px 22px;
+      color: var(--navy-900);
+      font-size: 0.93rem;
+      font-weight: 750;
+      line-height: 1.45;
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      display: grid;
+      width: 28px;
+      height: 28px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--blue-50);
+      color: var(--blue-700);
+      content: "+";
+      font-size: 1.15rem;
+      transform: translateY(-50%);
+      transition: transform 180ms ease, background 180ms ease;
+    }
+
+    .faq-item[open] summary::after {
+      background: var(--gold-500);
+      color: var(--navy-950);
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 0 22px 22px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .faq-answer p {
+      margin-bottom: 0;
+    }
+
+    /* CTA */
+    .final-cta {
+      padding-block: clamp(66px, 8vw, 106px);
+      background: var(--white);
+    }
+
+    .cta-card {
+      position: relative;
+      display: grid;
+      overflow: hidden;
+      align-items: center;
+      gap: 40px;
+      grid-template-columns: minmax(0, 1fr) auto;
+      border-radius: var(--radius-lg);
+      background:
+        radial-gradient(circle at 82% -30%, rgba(246, 196, 69, 0.32), transparent 38%),
+        var(--navy-900);
+      padding: clamp(34px, 6vw, 70px);
+      color: rgba(255, 255, 255, 0.72);
+      box-shadow: var(--shadow-md);
+    }
+
+    .cta-card::after {
+      position: absolute;
+      right: 20%;
+      bottom: -145px;
+      width: 290px;
+      height: 290px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 50%;
+      content: "";
+      box-shadow: 0 0 0 38px rgba(255, 255, 255, 0.025), 0 0 0 76px rgba(255, 255, 255, 0.018);
+    }
+
+    .cta-copy {
+      position: relative;
+      z-index: 1;
+      max-width: 660px;
+    }
+
+    .cta-copy h2 {
+      margin-bottom: 15px;
+      color: var(--white);
+    }
+
+    .cta-copy p {
+      margin-bottom: 0;
+    }
+
+    .cta-actions {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 11px;
+    }
+
+    .cta-card .btn-secondary {
+      border-color: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.09);
+      color: var(--white);
+      box-shadow: none;
+    }
+
+    .cta-card .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--line);
+      background: var(--cream);
+      padding: 55px 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: 48px;
+      grid-template-columns: minmax(240px, 1.2fr) repeat(3, minmax(140px, 0.65fr));
+    }
+
+    .footer-brand {
+      max-width: 410px;
+    }
+
+    .footer-brand .brand {
+      margin-bottom: 18px;
+    }
+
+    .footer-brand > p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 16px;
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      display: grid;
+      margin: 0;
+      gap: 10px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      font-size: 0.83rem;
+      text-decoration: none;
+      transition: color 180ms ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--blue-700);
+    }
+
+    .social-copy {
+      margin: -4px 0 15px;
+      color: var(--muted);
+      font-size: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .social-link {
+      display: grid;
+      width: 43px;
+      height: 43px;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: var(--white);
+      text-decoration: none;
+      box-shadow: 0 7px 18px rgba(7, 23, 45, 0.06);
+      transition: color 180ms ease, background 180ms ease, border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .social-link svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .social-link:hover {
+      color: var(--white);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(7, 23, 45, 0.14);
+    }
+
+    .social-link.facebook {
+      color: #1877f2;
+    }
+
+    .social-link.facebook:hover {
+      border-color: #1877f2;
+      background: #1877f2;
+    }
+
+    .social-link.instagram {
+      color: #c13584;
+    }
+
+    .social-link.instagram:hover {
+      border-color: #c13584;
+      background: #c13584;
+    }
+
+    .social-link.youtube {
+      color: #ff0000;
+    }
+
+    .social-link.youtube:hover {
+      border-color: #ff0000;
+      background: #ff0000;
+    }
+
+    .social-link.whatsapp {
+      color: #128c4c;
+    }
+
+    .social-link.whatsapp:hover {
+      border-color: #128c4c;
+      background: #128c4c;
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 46px;
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+      color: #6b7889;
+      font-size: 0.75rem;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+    }
+
+    /* Course guide dialog */
+    .guide-dialog {
+      width: min(calc(100% - 28px), 620px);
+      max-height: min(90vh, 760px);
+      overflow: auto;
+      border: 0;
+      border-radius: 28px;
+      background: var(--white);
+      padding: 0;
+      color: var(--ink);
+      box-shadow: 0 35px 100px rgba(7, 23, 45, 0.33);
+    }
+
+    .guide-dialog::backdrop {
+      background: rgba(7, 23, 45, 0.68);
+      backdrop-filter: blur(7px);
+    }
+
+    .guide-shell {
+      position: relative;
+      padding: clamp(28px, 6vw, 48px);
+    }
+
+    .dialog-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      display: grid;
+      width: 40px;
+      height: 40px;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--navy-900);
+      font-size: 1.25rem;
+      cursor: pointer;
+    }
+
+    .guide-progress {
+      display: flex;
+      gap: 7px;
+      margin-bottom: 30px;
+      padding-right: 48px;
+    }
+
+    .guide-progress span {
+      width: 38px;
+      height: 5px;
+      border-radius: 999px;
+      background: var(--line);
+      transition: background 180ms ease, width 180ms ease;
+    }
+
+    .guide-progress span.active {
+      width: 58px;
+      background: var(--gold-500);
+    }
+
+    .guide-step[hidden] {
+      display: none;
+    }
+
+    .guide-step h2 {
+      margin-bottom: 10px;
+      padding-right: 34px;
+      font-size: clamp(1.65rem, 5vw, 2.45rem);
+    }
+
+    .guide-step > p {
+      margin-bottom: 25px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .guide-options {
+      display: grid;
+      gap: 11px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .guide-choice {
+      min-height: 92px;
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: var(--cream);
+      padding: 17px;
+      color: var(--navy-900);
+      font-weight: 750;
+      text-align: left;
+      cursor: pointer;
+      transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+    }
+
+    .guide-choice:hover {
+      border-color: var(--blue-600);
+      background: var(--blue-50);
+      transform: translateY(-2px);
+    }
+
+    .guide-choice small {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 0.71rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .guide-back {
+      margin-top: 18px;
+      border: 0;
+      background: transparent;
+      color: var(--blue-700);
+      font-size: 0.83rem;
+      font-weight: 750;
+      cursor: pointer;
+    }
+
+    .guide-result-card {
+      margin-bottom: 24px;
+      border: 1px solid rgba(21, 87, 167, 0.16);
+      border-radius: 20px;
+      background: var(--blue-50);
+      padding: 24px;
+    }
+
+    .guide-result-label {
+      display: block;
+      margin-bottom: 9px;
+      color: var(--blue-700);
+      font-size: 0.7rem;
+      font-weight: 850;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .guide-result-card h3 {
+      margin-bottom: 9px;
+      font-size: 1.35rem;
+    }
+
+    .guide-result-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .guide-result-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Reveal */
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 650ms ease, transform 650ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .js .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .js .stagger > * {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 520ms ease, transform 520ms ease;
+    }
+
+    .js .stagger.visible > * {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stagger.visible > *:nth-child(2) {
+      transition-delay: 80ms;
+    }
+
+    .stagger.visible > *:nth-child(3) {
+      transition-delay: 160ms;
+    }
+
+    .stagger.visible > *:nth-child(4) {
+      transition-delay: 240ms;
+    }
+
+    /* Responsive */
+    @media (max-width: 1050px) {
+      .main-nav {
+        gap: 19px;
+      }
+
+      .nav-link {
+        font-size: 0.84rem;
+      }
+
+      .hero-grid {
+        gap: 48px;
+        grid-template-columns: minmax(0, 1fr) minmax(340px, 0.85fr);
+      }
+
+      .floating-card.one {
+        left: -3%;
+      }
+
+      .floating-card.two {
+        right: -2%;
+      }
+
+      .quick-path {
+        padding: 18px;
+      }
+
+      .method-card {
+        padding: 23px;
+      }
+    }
+
+    @media (max-width: 960px) {
+      :root {
+        --header-height: 70px;
+      }
+
+      .container {
+        width: min(calc(100% - 32px), var(--container));
+      }
+
+      .nav-shell {
+        gap: 12px;
+        min-height: var(--header-height);
+      }
+
+      .brand {
+        flex: 1;
+      }
+
+      .brand-mark {
+        width: 46px;
+        height: 46px;
+        border-radius: 13px;
+      }
+
+      .nav-toggle {
+        display: flex;
+      }
+
+      .main-nav {
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        left: 0;
+        display: grid;
+        visibility: hidden;
+        align-content: start;
+        gap: 4px;
+        max-height: calc(100vh - var(--header-height));
+        overflow-y: auto;
+        border-top: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.98);
+        padding: 18px 20px 26px;
+        box-shadow: 0 20px 50px rgba(7, 23, 45, 0.15);
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 180ms ease, transform 180ms ease, visibility 180ms;
+      }
+
+      .main-nav.open {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .nav-link {
+        border-radius: 12px;
+        padding: 13px 14px;
+        font-size: 0.94rem;
+      }
+
+      .nav-link:hover {
+        background: var(--blue-50);
+      }
+
+      .nav-link::after {
+        display: none;
+      }
+
+      .nav-cta {
+        width: 100%;
+        margin-top: 8px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        max-width: 720px;
+      }
+
+      .hero-visual {
+        width: min(100%, 650px);
+        margin-inline: auto;
+      }
+
+      .hero-photo-shell {
+        aspect-ratio: 1.22 / 1;
+      }
+
+      .quick-paths-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .quick-path + .quick-path {
+        border-left: 0;
+      }
+
+      .quick-path:nth-child(even) {
+        border-left: 1px solid var(--line);
+      }
+
+      .quick-path:nth-child(n + 3) {
+        border-top: 1px solid var(--line);
+      }
+
+      .program-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .course-detail {
+        position: relative;
+        top: auto;
+      }
+
+      .method-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .method-grid::before {
+        display: none;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-card {
+        width: min(100%, 580px);
+        min-height: 500px;
+        margin-inline: auto;
+      }
+
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .faq .section-heading {
+        position: static;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+
+      .cta-card {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .section {
+        padding-block: 72px;
+      }
+
+      .brand-copy strong {
+        font-size: 0.91rem;
+      }
+
+      .brand-copy span {
+        font-size: 0.58rem;
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
+
+      h1 {
+        font-size: clamp(2.45rem, 13.4vw, 4rem);
+      }
+
+      .hero-actions {
+        display: grid;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .hero-highlights {
+        display: grid;
+        gap: 10px;
+      }
+
+      .hero-photo-shell {
+        aspect-ratio: 0.96 / 1;
+        border-width: 6px;
+        border-radius: 38% 62% 44% 56% / 38% 40% 60% 62%;
+      }
+
+      .hero-photo {
+        object-position: 65% center;
+      }
+
+      .floating-card {
+        max-width: 178px;
+        padding: 9px 11px 9px 9px;
+        font-size: 0.7rem;
+      }
+
+      .floating-card::before {
+        width: 31px;
+        height: 31px;
+      }
+
+      .floating-card.one {
+        top: 5%;
+        left: -1%;
+      }
+
+      .floating-card.two {
+        right: -1%;
+        bottom: 5%;
+      }
+
+      .quick-paths {
+        margin-top: -35px;
+      }
+
+      .quick-paths-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-path {
+        min-height: 96px;
+      }
+
+      .quick-path:nth-child(even),
+      .quick-path:nth-child(n + 2) {
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+
+      .program-toolbar {
+        margin-right: -16px;
+        margin-left: -16px;
+        border-right: 0;
+        border-left: 0;
+        border-radius: 0;
+        padding-inline: 16px;
+      }
+
+      .course-card {
+        gap: 11px;
+        grid-template-columns: 44px minmax(0, 1fr) 30px;
+        padding: 12px;
+      }
+
+      .course-code {
+        width: 44px;
+        height: 44px;
+        border-radius: 13px;
+      }
+
+      .course-meta {
+        white-space: normal;
+      }
+
+      .course-detail-inner {
+        padding: 28px 23px;
+      }
+
+      .method-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .method-card {
+        min-height: auto;
+      }
+
+      .method-number {
+        margin-bottom: 28px;
+      }
+
+      .about-card {
+        min-height: 410px;
+      }
+
+      .about-card-main {
+        inset: 0 5% 8% 0;
+        border-radius: 30px 30px 90px 30px;
+      }
+
+      .about-mini-card {
+        max-width: 190px;
+        padding: 17px;
+      }
+
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-actions {
+        display: grid;
+      }
+
+      .cta-actions .btn {
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .guide-options {
+        grid-template-columns: 1fr;
+      }
+
+      .guide-choice {
+        min-height: 78px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .container {
+        width: min(calc(100% - 24px), var(--container));
+      }
+
+      .brand-copy span {
+        display: none;
+      }
+
+      .brand-copy strong {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .brand-mark {
+        width: 43px;
+        height: 43px;
+      }
+
+      .hero-kicker {
+        font-size: 0.67rem;
+      }
+
+      .floating-card {
+        transform: scale(0.9);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal,
+      .stagger > * {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-shell">
+      <a class="brand" href="#inicio" aria-label="Be Wise English School, ir al inicio">
+        <img class="brand-mark" src="assets/logo/logo.jpg" width="637" height="635" alt="">
+        <span class="brand-copy">
+          <strong>Be Wise English School</strong>
+          <span>American &amp; British English</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú">
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+        <a class="nav-link active" href="#inicio" aria-current="location">Inicio</a>
+        <a class="nav-link" href="#programas">Programas</a>
+        <a class="nav-link" href="#metodo">Cómo aprenderás</a>
+        <a class="nav-link" href="#nosotros">Nosotros</a>
+        <a class="nav-link" href="#preguntas">Preguntas</a>
+        <button class="btn btn-primary nav-cta" type="button" data-open-guide>Encuentra tu curso <span class="arrow" aria-hidden="true">→</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <span class="hero-word hello" aria-hidden="true">Hello!</span>
+      <span class="hero-word welcome" aria-hidden="true">Welcome</span>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="hero-kicker">
+            <span class="hero-kicker-mark" aria-hidden="true">BW</span>
+            Inglés para cada etapa de tu vida
+          </div>
+          <h1 id="hero-title">Habla inglés con <span class="text-accent">confianza.</span> Llega más lejos.</h1>
+          <p>Desde los primeros pasos hasta un nivel avanzado: encuentra una ruta clara para aprender, practicar y usar el idioma en situaciones que importan para ti.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#programas">Explorar programas <span class="arrow" aria-hidden="true">→</span></a>
+            <button class="btn btn-secondary" type="button" data-open-guide>Ayúdame a elegir</button>
+          </div>
+          <ul class="hero-highlights" aria-label="Características principales">
+            <li>Niños, jóvenes y adultos</li>
+            <li>Ruta MCER de A1 a C1</li>
+            <li>Opciones especializadas</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" id="heroVisual">
+          <div class="hero-photo-shell">
+            <img class="hero-photo" src="assets/images/hero-classroom.jpg" width="1717" height="916" alt="Docente conversando en inglés con estudiantes adultos en un salón luminoso" fetchpriority="high">
+          </div>
+          <div class="floating-card one" data-icon="A1">
+            Ruta clara
+            <small>Desde bases hasta C1</small>
+          </div>
+          <div class="floating-card two" data-icon="Hi">
+            Inglés que se usa
+            <small>Aprende para comunicarte</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="quick-paths" aria-label="Rutas de aprendizaje">
+      <div class="container">
+        <div class="quick-paths-grid stagger">
+          <div class="quick-path">
+            <span class="quick-path-number" aria-hidden="true">01</span>
+            <span><strong>Kids</strong><span>Aprendizaje por etapas</span></span>
+          </div>
+          <div class="quick-path">
+            <span class="quick-path-number" aria-hidden="true">02</span>
+            <span><strong>Niveles MCER</strong><span>De starters a advanced</span></span>
+          </div>
+          <div class="quick-path">
+            <span class="quick-path-number" aria-hidden="true">03</span>
+            <span><strong>Especializados</strong><span>Inglés para objetivos concretos</span></span>
+          </div>
+          <div class="quick-path">
+            <span class="quick-path-number" aria-hidden="true">04</span>
+            <span><strong>Instructores</strong><span>Formación y actualización</span></span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="section programs" id="programas" aria-labelledby="programs-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Programas Be Wise</p>
+          <h2 id="programs-title">Una opción para cada <span class="text-accent">meta.</span></h2>
+          <p class="section-lead">Explora las categorías y selecciona un curso para conocer qué habilidades puedes desarrollar en cada etapa.</p>
+        </div>
+
+        <div class="program-toolbar reveal" role="tablist" aria-label="Categorías de programas">
+          <button class="program-tab" id="tab-kids" type="button" role="tab" aria-selected="true" aria-controls="courseList" data-category="kids">Kids · 6 etapas</button>
+          <button class="program-tab" id="tab-levels" type="button" role="tab" aria-selected="false" aria-controls="courseList" data-category="levels" tabindex="-1">MCER · A1 a C1</button>
+          <button class="program-tab" id="tab-special" type="button" role="tab" aria-selected="false" aria-controls="courseList" data-category="special" tabindex="-1">Especializados · 7 opciones</button>
+          <button class="program-tab" id="tab-instructors" type="button" role="tab" aria-selected="false" aria-controls="courseList" data-category="instructors" tabindex="-1">Instructores · 3 rutas</button>
+        </div>
+
+        <noscript>
+          <p class="noscript-note">El catálogo incluye seis etapas Kids, niveles MCER de A1 a C1, siete cursos especializados y tres rutas para instructores. Activa JavaScript para explorar el detalle interactivo de cada programa.</p>
+        </noscript>
+
+        <div class="program-layout reveal">
+          <div class="course-list" id="courseList" role="tabpanel" aria-labelledby="tab-kids" tabindex="0"></div>
+          <aside class="course-detail" id="courseDetail" aria-live="polite" aria-label="Información del programa seleccionado">
+            <div class="course-detail-inner" id="courseDetailInner"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section method" id="metodo" aria-labelledby="method-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow on-dark">Una ruta con intención</p>
+          <h2 id="method-title">Aprender se siente mejor cuando sabes <span class="text-accent">hacia dónde vas.</span></h2>
+          <p class="section-lead">Cada programa puede adaptarse al punto de partida y al objetivo del estudiante, manteniendo una progresión clara y práctica.</p>
+        </div>
+
+        <div class="method-grid stagger">
+          <article class="method-card">
+            <span class="method-number" aria-hidden="true">01</span>
+            <h3>Descubre tu punto de partida</h3>
+            <p>Identifica la ruta que mejor corresponde a tu edad, experiencia y propósito con el idioma.</p>
+          </article>
+          <article class="method-card">
+            <span class="method-number" aria-hidden="true">02</span>
+            <h3>Construye bases firmes</h3>
+            <p>Avanza de manera ordenada en vocabulario, comprensión y estructuras esenciales.</p>
+          </article>
+          <article class="method-card">
+            <span class="method-number" aria-hidden="true">03</span>
+            <h3>Practica para comunicarte</h3>
+            <p>Convierte lo aprendido en recursos útiles para expresarte en contextos reales.</p>
+          </article>
+          <article class="method-card">
+            <span class="method-number" aria-hidden="true">04</span>
+            <h3>Avanza con un objetivo</h3>
+            <p>Elige tu siguiente nivel o una especialidad de acuerdo con lo que quieres lograr.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="nosotros" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-card reveal" aria-hidden="true">
+          <div class="about-card-main">
+            <img class="about-logo" src="assets/logo/logo.jpg" width="637" height="635" alt="">
+          </div>
+          <div class="about-mini-card">
+            <strong>Be Wise</strong>
+            <span>American and British English para distintas etapas y objetivos.</span>
+          </div>
+        </div>
+
+        <div class="about-copy reveal">
+          <p class="eyebrow">Quiénes somos</p>
+          <h2 id="about-title">El inglés no es solo una materia. Es una nueva forma de <span class="text-accent">conectar.</span></h2>
+          <p>En Be Wise English School reunimos rutas para niños, jóvenes, adultos, profesionales e instructores. La variedad de programas permite que cada persona encuentre un punto de entrada y continúe avanzando de acuerdo con sus necesidades.</p>
+          <p>Queremos que explorar el idioma se sienta claro, cercano y posible, tanto para quien empieza como para quien busca llevar su inglés a un contexto especializado.</p>
+
+          <div class="value-grid stagger">
+            <article class="value-card">
+              <span class="value-dot" aria-hidden="true"></span>
+              <strong>Claridad</strong>
+              <p>Rutas organizadas para entender cuál es el siguiente paso.</p>
+            </article>
+            <article class="value-card">
+              <span class="value-dot" aria-hidden="true"></span>
+              <strong>Cercanía</strong>
+              <p>Opciones pensadas para diferentes edades y momentos de vida.</p>
+            </article>
+            <article class="value-card">
+              <span class="value-dot" aria-hidden="true"></span>
+              <strong>Propósito</strong>
+              <p>Inglés general, técnico y profesional según cada objetivo.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="preguntas" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2 id="faq-title">Antes de elegir, aclaremos tus <span class="text-accent">dudas.</span></h2>
+          <p class="section-lead">Estas respuestas te ayudan a ubicar la categoría que podría ajustarse mejor a tu objetivo.</p>
+        </div>
+
+        <div class="faq-list reveal">
+          <details class="faq-item">
+            <summary>¿Qué programa elijo si nunca he estudiado inglés?</summary>
+            <div class="faq-answer">
+              <p>La ruta MCER comienza con A1 Starters, pensada para construir las bases. Para niñas y niños, la secuencia comienza en Kids 1. El punto exacto de entrada puede definirse al solicitar orientación.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Hay opciones para niñas y niños?</summary>
+            <div class="faq-answer">
+              <p>Sí. La línea Kids está organizada en seis etapas consecutivas para acompañar el aprendizaje desde los primeros acercamientos al idioma.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Puedo estudiar inglés en línea?</summary>
+            <div class="faq-answer">
+              <p>Sí. Dentro de los cursos especializados se encuentra la opción de Inglés en línea. La disponibilidad y los horarios se confirman directamente con la escuela.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Existen cursos para el área de la salud?</summary>
+            <div class="faq-answer">
+              <p>La oferta incluye inglés técnico médico para dentistas y una ruta dirigida a enfermeros y médicos, enfocadas en el vocabulario y las situaciones propias de cada contexto.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Hay opciones para docentes de inglés?</summary>
+            <div class="faq-answer">
+              <p>Sí. Be Wise contempla rutas para instructores de inglés, preparación orientada a instructores de TOEFL y espacios de actualización docente.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-card reveal">
+          <div class="cta-copy">
+            <p class="eyebrow on-dark">Tu siguiente paso</p>
+            <h2 id="cta-title">Hay una ruta de inglés que puede ir contigo.</h2>
+            <p>Cuéntanos qué quieres lograr en nuestro orientador y te llevaremos a la categoría más cercana a tu objetivo.</p>
+          </div>
+          <div class="cta-actions">
+            <button class="btn btn-primary" type="button" data-open-guide>Encontrar mi ruta <span class="arrow" aria-hidden="true">→</span></button>
+            <a class="btn btn-secondary" href="#programas">Ver todos los cursos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#inicio" aria-label="Be Wise English School, ir al inicio">
+            <img class="brand-mark" src="assets/logo/logo.jpg" width="637" height="635" alt="">
+            <span class="brand-copy">
+              <strong>Be Wise English School</strong>
+              <span>American &amp; British English</span>
+            </span>
+          </a>
+          <p>Programas de inglés para distintas edades, niveles y objetivos profesionales.</p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Explora</h3>
+          <ul class="footer-links">
+            <li><a href="#programas">Programas</a></li>
+            <li><a href="#metodo">Cómo aprenderás</a></li>
+            <li><a href="#nosotros">Quiénes somos</a></li>
+            <li><a href="#preguntas">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Programas</h3>
+          <ul class="footer-links">
+            <li><a href="#programas" data-footer-category="kids">Kids</a></li>
+            <li><a href="#programas" data-footer-category="levels">Niveles MCER</a></li>
+            <li><a href="#programas" data-footer-category="special">Especializados</a></li>
+            <li><a href="#programas" data-footer-category="instructors">Instructores</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Síguenos</h3>
+          <p class="social-copy">Encuentra a Be Wise en redes sociales.</p>
+          <div class="social-links" aria-label="Redes sociales de Be Wise English School">
+            <!-- Reemplaza únicamente el # por la URL real de Facebook. -->
+            <a class="social-link facebook" href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Be Wise English School">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M14 8h3V4h-3c-3.2 0-5 1.9-5 5.2V12H6v4h3v8h4v-8h3.5l.5-4h-4V9.4C13 8.4 13.3 8 14 8Z"/>
+              </svg>
+            </a>
+
+            <!-- Reemplaza únicamente el # por la URL real de Instagram. -->
+            <a class="social-link instagram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Be Wise English School">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="17.4" cy="6.7" r="1.2" fill="currentColor"/>
+              </svg>
+            </a>
+
+            <!-- Reemplaza únicamente el # por la URL real de YouTube. -->
+            <a class="social-link youtube" href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube de Be Wise English School">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M21.6 7.1a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.4a2.7 2.7 0 0 0-1.9 1.9C2 8.7 2 12 2 12s0 3.3.4 4.9a2.7 2.7 0 0 0 1.9 1.9c1.7.4 7.7.4 7.7.4s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9c.4-1.6.4-4.9.4-4.9s0-3.3-.4-4.9Z"/>
+                <path fill="#ffffff" d="m10 15.2 5.2-3.2L10 8.8v6.4Z"/>
+              </svg>
+            </a>
+
+            <!-- Reemplaza únicamente el # por la URL real de WhatsApp. -->
+            <a class="social-link whatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de Be Wise English School">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M20.5 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.8-5A8.5 8.5 0 1 1 20.5 11.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8.1 7.4c.5 3.9 2.6 6 6.5 6.6l1.5-1.6 2 .9c.2.1.4.3.3.6-.3 2-1.8 3.2-3.8 3-5.1-.7-8.8-4.4-9.5-9.5-.2-2 1-3.5 3-3.8.3 0 .5.1.6.3l.9 2-1.5 1.5Z" fill="currentColor"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="currentYear">2026</span> Be Wise English School. Todos los derechos reservados.</p>
+        <p>Horarios, modalidades y disponibilidad se confirman con la escuela.</p>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="guide-dialog" id="guideDialog" aria-label="Orientador de cursos Be Wise">
+    <div class="guide-shell">
+      <button class="dialog-close" id="guideClose" type="button" aria-label="Cerrar orientador">×</button>
+      <div class="guide-progress" aria-hidden="true">
+        <span class="active" data-progress="1"></span>
+        <span data-progress="2"></span>
+        <span data-progress="3"></span>
+      </div>
+
+      <section class="guide-step" data-guide-step="1">
+        <h2 id="guideTitle">¿Para quién buscas un programa?</h2>
+        <p>Elige el perfil que más se aproxima. Solo tomará unos segundos.</p>
+        <div class="guide-options">
+          <button class="guide-choice" type="button" data-profile="kids">Niña o niño<small>Una ruta Kids por etapas</small></button>
+          <button class="guide-choice" type="button" data-profile="adult">Joven o adulto<small>Inglés general de A1 a C1</small></button>
+          <button class="guide-choice" type="button" data-profile="professional">Profesional<small>Inglés aplicado a una meta concreta</small></button>
+          <button class="guide-choice" type="button" data-profile="teacher">Instructor de inglés<small>Formación y actualización docente</small></button>
+        </div>
+      </section>
+
+      <section class="guide-step" data-guide-step="2" hidden>
+        <h2>¿Qué quieres lograr primero?</h2>
+        <p>Tu respuesta nos ayuda a acercarte a una categoría del catálogo.</p>
+        <div class="guide-options">
+          <button class="guide-choice" type="button" data-goal="start">Empezar desde cero<small>Construir vocabulario y bases esenciales</small></button>
+          <button class="guide-choice" type="button" data-goal="advance">Subir mi nivel<small>Continuar una ruta de aprendizaje</small></button>
+          <button class="guide-choice" type="button" data-goal="technical">Usarlo en mi profesión<small>Buscar una opción especializada</small></button>
+          <button class="guide-choice" type="button" data-goal="online">Estudiar en línea<small>Aprender con mayor flexibilidad</small></button>
+        </div>
+        <button class="guide-back" type="button" data-guide-back>← Volver</button>
+      </section>
+
+      <section class="guide-step" data-guide-step="3" hidden>
+        <h2>Esta ruta puede ser un buen comienzo.</h2>
+        <p>Es una orientación inicial; la escuela puede ayudarte a confirmar el programa indicado.</p>
+        <div class="guide-result-card">
+          <span class="guide-result-label">Sugerencia Be Wise</span>
+          <h3 id="guideResultTitle"></h3>
+          <p id="guideResultText"></p>
+        </div>
+        <div class="guide-result-actions">
+          <button class="btn btn-primary" id="viewRecommendation" type="button">Ver recomendación <span class="arrow" aria-hidden="true">→</span></button>
+          <button class="btn btn-secondary" type="button" data-guide-restart>Empezar de nuevo</button>
+        </div>
+      </section>
+    </div>
+  </dialog>
+
+  <script>
+    document.documentElement.classList.add("js");
+
+    (function () {
+      "use strict";
+
+      var catalog = {
+        kids: [
+          {
+            code: "K1",
+            name: "Kids 1",
+            meta: "Primer acercamiento al inglés",
+            description: "Una introducción amable al idioma para familiarizarse con palabras, sonidos e instrucciones sencillas.",
+            highlights: ["Vocabulario cotidiano y expresiones básicas", "Comprensión auditiva a través de actividades breves", "Seguridad para repetir y responder en inglés"]
+          },
+          {
+            code: "K2",
+            name: "Kids 2",
+            meta: "Bases que empiezan a crecer",
+            description: "La siguiente etapa amplía el vocabulario y ayuda a formar mensajes cortos con mayor independencia.",
+            highlights: ["Frases breves sobre temas familiares", "Reconocimiento de preguntas frecuentes", "Práctica de pronunciación y escucha"]
+          },
+          {
+            code: "K3",
+            name: "Kids 3",
+            meta: "Más vocabulario, más expresión",
+            description: "Una etapa para conectar vocabulario con estructuras sencillas y participar con más confianza.",
+            highlights: ["Descripción de personas, objetos y rutinas", "Lectura de textos cortos", "Interacción guiada en situaciones conocidas"]
+          },
+          {
+            code: "K4",
+            name: "Kids 4",
+            meta: "Comunicación en situaciones conocidas",
+            description: "El estudiante continúa desarrollando recursos para comprender y expresar ideas con mayor detalle.",
+            highlights: ["Conversaciones breves y comprensibles", "Escritura de mensajes sencillos", "Comprensión de ideas principales"]
+          },
+          {
+            code: "K5",
+            name: "Kids 5",
+            meta: "Mayor autonomía al comunicarse",
+            description: "Una ruta para fortalecer la comprensión y usar el idioma con menos apoyo en temas familiares.",
+            highlights: ["Opiniones y experiencias personales", "Textos con mayor variedad de vocabulario", "Fluidez progresiva en actividades orales"]
+          },
+          {
+            code: "K6",
+            name: "Kids 6",
+            meta: "Preparación para el siguiente nivel",
+            description: "La etapa final de la línea Kids integra habilidades y prepara la transición hacia rutas posteriores.",
+            highlights: ["Integración de lectura, escucha, habla y escritura", "Mensajes más claros y organizados", "Consolidación de bases para seguir avanzando"]
+          }
+        ],
+        levels: [
+          {
+            code: "A1",
+            name: "Inglés A1 Starters",
+            meta: "Bases esenciales · MCER",
+            description: "El punto de partida para comprender y usar expresiones muy frecuentes en situaciones cotidianas.",
+            highlights: ["Presentarte y compartir información personal", "Comprender indicaciones y preguntas sencillas", "Usar vocabulario básico de la vida diaria"]
+          },
+          {
+            code: "A2",
+            name: "Inglés A2 Elementary",
+            meta: "Comunicación cotidiana · MCER",
+            description: "Una etapa para desenvolverse en intercambios simples sobre temas cercanos y necesidades inmediatas.",
+            highlights: ["Hablar de rutinas, gustos y experiencias", "Comprender mensajes breves y directos", "Resolver intercambios cotidianos sencillos"]
+          },
+          {
+            code: "B1",
+            name: "Inglés B1 Pre-intermediate",
+            meta: "Más independencia · MCER",
+            description: "Desarrolla recursos para comunicarte de forma comprensible en viajes, estudio y situaciones habituales.",
+            highlights: ["Narrar experiencias y explicar planes", "Comprender las ideas principales de textos claros", "Mantener conversaciones sobre temas familiares"]
+          },
+          {
+            code: "B2",
+            name: "Inglés B2 Intermediate",
+            meta: "Comunicación fluida · MCER",
+            description: "Fortalece la interacción espontánea y la comprensión de ideas más complejas en contextos diversos.",
+            highlights: ["Defender opiniones con razones", "Participar con mayor fluidez en conversaciones", "Comprender textos y contenidos más detallados"]
+          },
+          {
+            code: "B2+",
+            name: "Inglés B2+ Upper Intermediate",
+            meta: "Precisión y soltura · MCER",
+            description: "Una etapa de consolidación para expresarte con más precisión antes de avanzar al nivel superior.",
+            highlights: ["Ampliar matices y vocabulario", "Mejorar naturalidad y control del idioma", "Abordar tareas académicas o profesionales"]
+          },
+          {
+            code: "C1",
+            name: "Inglés C1 Advanced",
+            meta: "Uso avanzado · MCER",
+            description: "Una ruta para comprender contenidos exigentes y comunicar ideas complejas con flexibilidad.",
+            highlights: ["Expresión fluida y bien estructurada", "Comprensión de significados implícitos", "Uso del inglés en ámbitos académicos y profesionales"]
+          }
+        ],
+        special: [
+          {
+            code: "DEN",
+            name: "Inglés técnico médico para dentistas",
+            meta: "Vocabulario y comunicación profesional",
+            description: "Inglés aplicado a situaciones frecuentes del entorno odontológico y a la comunicación con pacientes.",
+            highlights: ["Terminología relacionada con atención dental", "Preguntas, indicaciones y explicación de procedimientos", "Comunicación profesional más clara"]
+          },
+          {
+            code: "MED",
+            name: "Inglés técnico médico para enfermeros y médicos",
+            meta: "Inglés para el área de la salud",
+            description: "Una ruta especializada para desarrollar recursos lingüísticos útiles en contextos clínicos.",
+            highlights: ["Vocabulario médico de uso frecuente", "Interacción con pacientes y colegas", "Comprensión de indicaciones y situaciones clínicas"]
+          },
+          {
+            code: "1A",
+            name: "Inglés en 1 año",
+            meta: "Ruta de aprendizaje intensiva",
+            description: "Una alternativa para quienes buscan avanzar con un ritmo concentrado y una meta temporal definida.",
+            highlights: ["Progresión organizada por objetivos", "Trabajo constante de habilidades integradas", "Enfoque intensivo sujeto al punto de partida"]
+          },
+          {
+            code: "TUT",
+            name: "Tutorías de inglés",
+            meta: "Acompañamiento para necesidades puntuales",
+            description: "Apoyo dirigido a temas, habilidades o dificultades específicas que requieren atención adicional.",
+            highlights: ["Revisión de temas concretos", "Práctica enfocada en áreas de oportunidad", "Acompañamiento para reforzar el aprendizaje"]
+          },
+          {
+            code: "ON",
+            name: "Inglés en línea",
+            meta: "Aprendizaje con flexibilidad",
+            description: "Una modalidad para continuar aprendiendo inglés a distancia y adaptar el estudio a tu ubicación.",
+            highlights: ["Acceso desde donde te encuentres", "Actividades de comunicación en formato digital", "Continuidad de la ruta de aprendizaje"]
+          },
+          {
+            code: "EXP",
+            name: "Inglés para americanos que radican en México",
+            meta: "Programa para residentes en México",
+            description: "Una opción incluida en la oferta de Be Wise para personas estadounidenses que viven en México.",
+            highlights: ["Atención a necesidades particulares del participante", "Práctica guiada según su contexto", "Objetivos definidos directamente con la escuela"]
+          },
+          {
+            code: "60+",
+            name: "Inglés para adultos mayores de 60",
+            meta: "Aprender a cualquier edad",
+            description: "Una ruta para acercarse al inglés o retomarlo con objetivos significativos para esta etapa de vida.",
+            highlights: ["Progresión clara y accesible", "Vocabulario útil para intereses cotidianos", "Práctica para ganar seguridad al comunicarse"]
+          }
+        ],
+        instructors: [
+          {
+            code: "TEA",
+            name: "Instructor de inglés",
+            meta: "Formación para la enseñanza",
+            description: "Una ruta dirigida a quienes desean desarrollar recursos para acompañar el aprendizaje del inglés.",
+            highlights: ["Planeación y organización de clases", "Recursos para explicar y practicar el idioma", "Desarrollo de habilidades docentes"]
+          },
+          {
+            code: "TFL",
+            name: "Instructor de TOEFL",
+            meta: "Preparación docente especializada",
+            description: "Formación orientada a instructores que desean trabajar con las habilidades y tareas asociadas al TOEFL.",
+            highlights: ["Comprensión de las áreas evaluadas", "Estrategias para orientar la preparación", "Práctica y retroalimentación de tareas"]
+          },
+          {
+            code: "PRO",
+            name: "Instructores",
+            meta: "Actualización y acompañamiento docente",
+            description: "Un espacio para fortalecer la práctica de quienes ya participan en la enseñanza del idioma.",
+            highlights: ["Revisión de recursos pedagógicos", "Reflexión sobre la práctica docente", "Herramientas para enriquecer las clases"]
+          }
+        ]
+      };
+
+      var categoryLabels = {
+        kids: "Programa Kids",
+        levels: "Nivel MCER",
+        special: "Curso especializado",
+        instructors: "Formación para instructores"
+      };
+
+      var header = document.getElementById("siteHeader");
+      var navToggle = document.getElementById("navToggle");
+      var mainNav = document.getElementById("mainNav");
+      var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav-link"));
+      var programTabs = Array.prototype.slice.call(document.querySelectorAll(".program-tab"));
+      var courseList = document.getElementById("courseList");
+      var courseDetail = document.getElementById("courseDetail");
+      var courseDetailInner = document.getElementById("courseDetailInner");
+      var activeCategory = "kids";
+      var activeCourseIndex = 0;
+
+      function closeMenu() {
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.setAttribute("aria-label", "Abrir menú");
+        mainNav.classList.remove("open");
+        document.body.classList.remove("menu-open");
+      }
+
+      navToggle.addEventListener("click", function () {
+        var isOpen = navToggle.getAttribute("aria-expanded") === "true";
+        navToggle.setAttribute("aria-expanded", String(!isOpen));
+        navToggle.setAttribute("aria-label", isOpen ? "Abrir menú" : "Cerrar menú");
+        mainNav.classList.toggle("open", !isOpen);
+        document.body.classList.toggle("menu-open", !isOpen);
+
+        if (!isOpen) {
+          window.setTimeout(function () {
+            var firstNavLink = mainNav.querySelector(".nav-link");
+            if (firstNavLink) {
+              firstNavLink.focus();
+            }
+          }, 0);
+        }
+      });
+
+      mainNav.addEventListener("focusout", function () {
+        window.setTimeout(function () {
+          var focusIsOutside = !mainNav.contains(document.activeElement) && document.activeElement !== navToggle;
+          if (window.innerWidth <= 960 && mainNav.classList.contains("open") && focusIsOutside) {
+            closeMenu();
+          }
+        }, 0);
+      });
+
+      navLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          var menuWasOpen = mainNav.classList.contains("open");
+          closeMenu();
+          if (menuWasOpen) {
+            window.setTimeout(function () {
+              navToggle.focus({ preventScroll: true });
+            }, 0);
+          }
+        });
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && mainNav.classList.contains("open")) {
+          closeMenu();
+          navToggle.focus();
+        }
+      });
+
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 960) {
+          closeMenu();
+        }
+      });
+
+      function updateHeader() {
+        header.classList.toggle("scrolled", window.scrollY > 16);
+      }
+
+      updateHeader();
+      window.addEventListener("scroll", updateHeader, { passive: true });
+
+      function renderCourses(category, selectedIndex, focusSelected) {
+        activeCategory = category;
+        activeCourseIndex = typeof selectedIndex === "number" ? selectedIndex : 0;
+        var items = catalog[category];
+
+        programTabs.forEach(function (tab) {
+          var selected = tab.getAttribute("data-category") === category;
+          tab.setAttribute("aria-selected", String(selected));
+          tab.setAttribute("tabindex", selected ? "0" : "-1");
+        });
+
+        var activeTab = document.querySelector('.program-tab[data-category="' + category + '"]');
+        courseList.setAttribute("aria-labelledby", activeTab.id);
+        courseList.textContent = "";
+
+        items.forEach(function (course, index) {
+          var button = document.createElement("button");
+          var code = document.createElement("span");
+          var copy = document.createElement("span");
+          var name = document.createElement("span");
+          var meta = document.createElement("span");
+          var arrow = document.createElement("span");
+          var selected = index === activeCourseIndex;
+
+          button.type = "button";
+          button.className = "course-card" + (selected ? " active" : "");
+          button.setAttribute("aria-pressed", String(selected));
+          button.setAttribute("data-course-index", String(index));
+
+          code.className = "course-code";
+          code.textContent = course.code;
+          code.setAttribute("aria-hidden", "true");
+
+          name.className = "course-name";
+          name.textContent = course.name;
+          meta.className = "course-meta";
+          meta.textContent = course.meta;
+          copy.appendChild(name);
+          copy.appendChild(meta);
+
+          arrow.className = "course-arrow";
+          arrow.textContent = "→";
+          arrow.setAttribute("aria-hidden", "true");
+
+          button.appendChild(code);
+          button.appendChild(copy);
+          button.appendChild(arrow);
+          button.addEventListener("click", function () {
+            selectCourse(index, true);
+          });
+          courseList.appendChild(button);
+        });
+
+        renderCourseDetail(items[activeCourseIndex]);
+
+        if (focusSelected) {
+          var selectedButton = courseList.querySelector(".course-card.active");
+          if (selectedButton) {
+            selectedButton.focus({ preventScroll: true });
+          }
+        }
+      }
+
+      function selectCourse(index, userInitiated) {
+        activeCourseIndex = index;
+        var cards = Array.prototype.slice.call(courseList.querySelectorAll(".course-card"));
+        cards.forEach(function (card, cardIndex) {
+          var selected = cardIndex === index;
+          card.classList.toggle("active", selected);
+          card.setAttribute("aria-pressed", String(selected));
+        });
+
+        renderCourseDetail(catalog[activeCategory][index]);
+
+        if (userInitiated && window.matchMedia("(max-width: 960px)").matches) {
+          window.setTimeout(function () {
+            courseDetail.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+          }, 90);
+        }
+      }
+
+      function renderCourseDetail(course) {
+        courseDetail.classList.remove("swap");
+        courseDetailInner.textContent = "";
+
+        var badge = document.createElement("span");
+        var title = document.createElement("h3");
+        var description = document.createElement("p");
+        var list = document.createElement("ul");
+        var guideButton = document.createElement("button");
+        var note = document.createElement("p");
+
+        badge.className = "detail-badge";
+        badge.textContent = categoryLabels[activeCategory];
+        title.textContent = course.name;
+        description.textContent = course.description;
+        list.className = "detail-list";
+
+        course.highlights.forEach(function (highlight) {
+          var item = document.createElement("li");
+          item.textContent = highlight;
+          list.appendChild(item);
+        });
+
+        guideButton.type = "button";
+        guideButton.className = "btn btn-primary";
+        guideButton.innerHTML = 'Comparar con mi objetivo <span class="arrow" aria-hidden="true">→</span>';
+        guideButton.addEventListener("click", openGuide);
+
+        note.className = "detail-note";
+        note.textContent = "Los contenidos específicos, horarios y disponibilidad se confirman directamente con la escuela.";
+
+        courseDetailInner.appendChild(badge);
+        courseDetailInner.appendChild(title);
+        courseDetailInner.appendChild(description);
+        courseDetailInner.appendChild(list);
+        courseDetailInner.appendChild(guideButton);
+        courseDetailInner.appendChild(note);
+
+        window.requestAnimationFrame(function () {
+          courseDetail.classList.add("swap");
+        });
+      }
+
+      programTabs.forEach(function (tab, index) {
+        tab.addEventListener("click", function () {
+          renderCourses(tab.getAttribute("data-category"), 0, false);
+        });
+
+        tab.addEventListener("keydown", function (event) {
+          var nextIndex = index;
+          if (event.key === "ArrowRight") {
+            nextIndex = (index + 1) % programTabs.length;
+          } else if (event.key === "ArrowLeft") {
+            nextIndex = (index - 1 + programTabs.length) % programTabs.length;
+          } else if (event.key === "Home") {
+            nextIndex = 0;
+          } else if (event.key === "End") {
+            nextIndex = programTabs.length - 1;
+          } else {
+            return;
+          }
+
+          event.preventDefault();
+          programTabs[nextIndex].focus();
+          programTabs[nextIndex].click();
+        });
+      });
+
+      document.querySelectorAll("[data-footer-category]").forEach(function (link) {
+        link.addEventListener("click", function () {
+          renderCourses(link.getAttribute("data-footer-category"), 0, false);
+        });
+      });
+
+      renderCourses("kids", 0, false);
+
+      var guideDialog = document.getElementById("guideDialog");
+      var guideClose = document.getElementById("guideClose");
+      var guideSteps = Array.prototype.slice.call(document.querySelectorAll("[data-guide-step]"));
+      var guideProgress = Array.prototype.slice.call(document.querySelectorAll("[data-progress]"));
+      var guideResultTitle = document.getElementById("guideResultTitle");
+      var guideResultText = document.getElementById("guideResultText");
+      var viewRecommendation = document.getElementById("viewRecommendation");
+      var selectedProfile = "";
+      var recommendation = null;
+      var guideReturnFocus = null;
+
+      function showGuideStep(stepNumber) {
+        guideSteps.forEach(function (step) {
+          step.hidden = Number(step.getAttribute("data-guide-step")) !== stepNumber;
+        });
+
+        guideProgress.forEach(function (progress) {
+          progress.classList.toggle("active", Number(progress.getAttribute("data-progress")) <= stepNumber);
+        });
+
+        var stepHeading = guideDialog.querySelector('[data-guide-step="' + stepNumber + '"] h2');
+        if (stepHeading) {
+          stepHeading.setAttribute("tabindex", "-1");
+          stepHeading.focus({ preventScroll: true });
+        }
+      }
+
+      function resetGuide() {
+        selectedProfile = "";
+        recommendation = null;
+        showGuideStep(1);
+      }
+
+      function openGuide(event) {
+        var trigger = event && event.currentTarget ? event.currentTarget : document.activeElement;
+        guideReturnFocus = trigger && mainNav.contains(trigger) ? navToggle : trigger;
+        closeMenu();
+        resetGuide();
+        if (typeof guideDialog.showModal === "function") {
+          guideDialog.showModal();
+        } else {
+          guideDialog.setAttribute("open", "");
+        }
+
+        window.requestAnimationFrame(function () {
+          var firstHeading = guideDialog.querySelector('[data-guide-step="1"] h2');
+          if (firstHeading) {
+            firstHeading.focus({ preventScroll: true });
+          }
+        });
+      }
+
+      function restoreGuideFocus() {
+        if (guideReturnFocus && document.contains(guideReturnFocus) && typeof guideReturnFocus.focus === "function") {
+          guideReturnFocus.focus();
+        }
+        guideReturnFocus = null;
+      }
+
+      function closeGuide() {
+        if (typeof guideDialog.close === "function") {
+          guideDialog.close();
+        } else {
+          guideDialog.removeAttribute("open");
+          restoreGuideFocus();
+        }
+      }
+
+      document.querySelectorAll("[data-open-guide]").forEach(function (button) {
+        button.addEventListener("click", openGuide);
+      });
+
+      guideClose.addEventListener("click", closeGuide);
+      guideDialog.addEventListener("close", restoreGuideFocus);
+
+      guideDialog.addEventListener("click", function (event) {
+        if (event.target === guideDialog) {
+          closeGuide();
+        }
+      });
+
+      document.querySelectorAll("[data-profile]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          selectedProfile = button.getAttribute("data-profile");
+          showGuideStep(2);
+        });
+      });
+
+      document.querySelector("[data-guide-back]").addEventListener("click", function () {
+        showGuideStep(1);
+      });
+
+      document.querySelector("[data-guide-restart]").addEventListener("click", resetGuide);
+
+      function getRecommendation(profile, goal) {
+        if (profile === "kids") {
+          return {
+            category: "kids",
+            index: goal === "advance" ? 3 : 0,
+            title: goal === "advance" ? "Ruta Kids · etapa intermedia" : "Ruta Kids · desde Kids 1",
+            text: "La línea Kids ofrece seis etapas. El nivel de entrada puede ajustarse según la experiencia previa del estudiante."
+          };
+        }
+
+        if (profile === "teacher") {
+          return {
+            category: "instructors",
+            index: goal === "technical" ? 1 : 0,
+            title: goal === "technical" ? "Instructor de TOEFL" : "Programas para instructores",
+            text: "Explora las opciones de formación y actualización para elegir la que corresponda a tu práctica docente."
+          };
+        }
+
+        if (goal === "technical") {
+          return {
+            category: "special",
+            index: 0,
+            title: "Cursos especializados",
+            text: "La oferta incluye rutas para el área de la salud, tutorías y otros objetivos concretos."
+          };
+        }
+
+        if (goal === "online") {
+          return {
+            category: "special",
+            index: 4,
+            title: "Inglés en línea",
+            text: "Esta modalidad puede ayudarte a continuar tu aprendizaje desde donde te encuentres."
+          };
+        }
+
+        if (goal === "advance") {
+          return {
+            category: "levels",
+            index: 2,
+            title: "Ruta MCER · B1 a C1",
+            text: "Si ya tienes bases, explora los niveles intermedios y avanzados. Una orientación inicial ayudará a confirmar tu punto de entrada."
+          };
+        }
+
+        return {
+          category: "levels",
+          index: 0,
+          title: "Inglés A1 Starters",
+          text: "A1 es el inicio de la ruta MCER y se enfoca en las bases para comunicarte en situaciones sencillas."
+        };
+      }
+
+      document.querySelectorAll("[data-goal]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          recommendation = getRecommendation(selectedProfile, button.getAttribute("data-goal"));
+          guideResultTitle.textContent = recommendation.title;
+          guideResultText.textContent = recommendation.text;
+          showGuideStep(3);
+        });
+      });
+
+      viewRecommendation.addEventListener("click", function () {
+        if (!recommendation) {
+          return;
+        }
+
+        renderCourses(recommendation.category, recommendation.index, false);
+        guideReturnFocus = document.querySelector('.program-tab[aria-selected="true"]');
+        closeGuide();
+        window.setTimeout(function () {
+          document.getElementById("programas").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+        }, 60);
+      });
+
+      var revealTargets = document.querySelectorAll(".reveal, .stagger");
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealTargets.forEach(function (target) {
+          target.classList.add("visible");
+        });
+      } else {
+        var revealObserver = new IntersectionObserver(function (entries, observer) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -40px" });
+
+        revealTargets.forEach(function (target) {
+          revealObserver.observe(target);
+        });
+      }
+
+      if ("IntersectionObserver" in window) {
+        var sections = document.querySelectorAll("main section[id]");
+        var navObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              navLinks.forEach(function (link) {
+                var isCurrent = link.getAttribute("href") === "#" + entry.target.id;
+                link.classList.toggle("active", isCurrent);
+                if (isCurrent) {
+                  link.setAttribute("aria-current", "location");
+                } else {
+                  link.removeAttribute("aria-current");
+                }
+              });
+            }
+          });
+        }, { rootMargin: "-35% 0px -55%", threshold: 0 });
+
+        sections.forEach(function (section) {
+          navObserver.observe(section);
+        });
+      }
+
+      var heroVisual = document.getElementById("heroVisual");
+      var photoShell = heroVisual.querySelector(".hero-photo-shell");
+      var canParallax = window.matchMedia("(pointer: fine)").matches && !reduceMotion;
+
+      if (canParallax) {
+        heroVisual.addEventListener("pointermove", function (event) {
+          var bounds = heroVisual.getBoundingClientRect();
+          var x = (event.clientX - bounds.left) / bounds.width - 0.5;
+          var y = (event.clientY - bounds.top) / bounds.height - 0.5;
+          photoShell.style.setProperty("--ry", (x * 5).toFixed(2) + "deg");
+          photoShell.style.setProperty("--rx", (-y * 5).toFixed(2) + "deg");
+        });
+
+        heroVisual.addEventListener("pointerleave", function () {
+          photoShell.style.setProperty("--ry", "0deg");
+          photoShell.style.setProperty("--rx", "0deg");
+        });
+      }
+
+      document.getElementById("currentYear").textContent = String(new Date().getFullYear());
+    })();
+  </script>
+</body>
+</html>
