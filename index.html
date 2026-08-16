@@ -1153,6 +1153,7 @@
       position: relative;
       z-index: 1;
       width: min(66%, 270px);
+      height: auto;
       aspect-ratio: 1;
       border-radius: 28px;
       background: var(--white);
@@ -1317,6 +1318,231 @@
 
     .faq-answer p {
       margin-bottom: 0;
+    }
+
+    /* Location */
+    .location {
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 8% 14%, rgba(246, 196, 69, 0.16), transparent 24%),
+        linear-gradient(180deg, var(--cream), var(--blue-50));
+    }
+
+    .location::before {
+      position: absolute;
+      top: 9%;
+      right: -110px;
+      width: 360px;
+      height: 360px;
+      border: 1px solid rgba(21, 87, 167, 0.08);
+      border-radius: 50%;
+      content: "";
+      box-shadow: 0 0 0 52px rgba(21, 87, 167, 0.025), 0 0 0 104px rgba(21, 87, 167, 0.018);
+      pointer-events: none;
+    }
+
+    .location .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .location-heading {
+      display: grid;
+      align-items: end;
+      gap: 34px;
+      margin-bottom: clamp(36px, 5vw, 58px);
+      grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.72fr);
+    }
+
+    .location-heading h2 {
+      max-width: 720px;
+      margin-bottom: 0;
+    }
+
+    .location-heading .section-lead {
+      max-width: 500px;
+      justify-self: end;
+    }
+
+    .location-card {
+      display: grid;
+      overflow: hidden;
+      grid-template-columns: minmax(310px, 0.76fr) minmax(0, 1.24fr);
+      border: 1px solid rgba(18, 52, 91, 0.12);
+      border-radius: clamp(26px, 4vw, 38px);
+      background: var(--white);
+      box-shadow: var(--shadow-md);
+    }
+
+    .location-panel {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      background:
+        radial-gradient(circle at 0 0, rgba(246, 196, 69, 0.2), transparent 34%),
+        var(--navy-900);
+      padding: clamp(30px, 4.5vw, 54px);
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .location-symbol {
+      display: grid;
+      width: 58px;
+      height: 58px;
+      margin-bottom: 28px;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 18px;
+      background: var(--gold-500);
+      color: var(--navy-950);
+      box-shadow: 0 14px 32px rgba(246, 196, 69, 0.2);
+    }
+
+    .location-symbol svg {
+      width: 27px;
+      height: 27px;
+    }
+
+    .location-kicker {
+      margin-bottom: 8px;
+      color: var(--gold-400);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .location-panel h3 {
+      margin-bottom: 14px;
+      color: var(--white);
+      font-size: clamp(1.55rem, 2.6vw, 2.15rem);
+    }
+
+    .location-panel > p:not(.location-kicker):not(.location-note) {
+      margin-bottom: 0;
+    }
+
+    .location-details {
+      display: grid;
+      width: 100%;
+      margin: 30px 0;
+      gap: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.11);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+    }
+
+    .location-detail {
+      display: grid;
+      align-items: center;
+      gap: 13px;
+      grid-template-columns: 38px minmax(0, 1fr);
+      padding-block: 17px;
+    }
+
+    .location-detail + .location-detail {
+      border-top: 1px solid rgba(255, 255, 255, 0.09);
+    }
+
+    .location-detail svg {
+      width: 22px;
+      height: 22px;
+      color: var(--gold-400);
+    }
+
+    .location-detail-label {
+      display: block;
+      margin-bottom: 2px;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.68rem;
+      font-weight: 750;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .location-detail-value {
+      display: block;
+      margin: 0;
+      color: var(--white);
+      font-size: 0.84rem;
+      font-weight: 650;
+      line-height: 1.45;
+    }
+
+    .location-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .location-panel .btn {
+      min-height: 49px;
+      padding-inline: 18px;
+      font-size: 0.84rem;
+    }
+
+    .location-panel .btn-secondary {
+      border-color: rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--white);
+      box-shadow: none;
+      backdrop-filter: none;
+    }
+
+    .location-panel .btn-secondary:hover {
+      border-color: rgba(255, 255, 255, 0.34);
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .location-note {
+      margin: 15px 0 0;
+      color: rgba(255, 255, 255, 0.47);
+      font-size: 0.68rem;
+      line-height: 1.5;
+    }
+
+    .location-map {
+      position: relative;
+      min-height: clamp(470px, 45vw, 560px);
+      overflow: hidden;
+      background: var(--blue-100);
+    }
+
+    .location-map iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .location-map-badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      border: 1px solid rgba(18, 52, 91, 0.1);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.94);
+      padding: 10px 14px;
+      color: var(--navy-900);
+      font-size: 0.74rem;
+      font-weight: 750;
+      box-shadow: 0 10px 28px rgba(7, 23, 45, 0.13);
+      pointer-events: none;
+      backdrop-filter: blur(10px);
+    }
+
+    .location-map-badge::before {
+      width: 9px;
+      height: 9px;
+      border: 3px solid rgba(246, 196, 69, 0.3);
+      border-radius: 50%;
+      background: var(--gold-500);
+      content: "";
+      box-sizing: content-box;
     }
 
     /* CTA */
@@ -1892,6 +2118,19 @@
         position: static;
       }
 
+      .location-heading,
+      .location-card {
+        grid-template-columns: 1fr;
+      }
+
+      .location-heading .section-lead {
+        justify-self: start;
+      }
+
+      .location-map {
+        min-height: 460px;
+      }
+
       .footer-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -2034,7 +2273,7 @@
       }
 
       .about-card {
-        min-height: 410px;
+        min-height: 500px;
       }
 
       .about-card-main {
@@ -2049,6 +2288,33 @@
 
       .value-grid {
         grid-template-columns: 1fr;
+      }
+
+      .location-card {
+        border-radius: 26px;
+      }
+
+      .location-panel {
+        padding: 30px 22px;
+      }
+
+      .location-actions {
+        display: grid;
+        width: 100%;
+      }
+
+      .location-actions .btn {
+        width: 100%;
+      }
+
+      .location-map {
+        min-height: 360px;
+      }
+
+      .location-map-badge {
+        top: 14px;
+        left: 14px;
+        padding: 9px 12px;
       }
 
       .cta-actions {
@@ -2172,7 +2438,7 @@
             Inglés para cada etapa de tu vida
           </div>
           <h1 id="hero-title">Habla inglés con <span class="text-accent">confianza.</span> Llega más lejos.</h1>
-          <p>Desde los primeros pasos hasta un nivel avanzado: encuentra una ruta clara para aprender, practicar y usar el idioma en situaciones que importan para ti.</p>
+          <p>Desde los primeros pasos hasta un nivel avanzado: encuentra una ruta clara para aprender, practicar y usar el idioma en situaciones como: escuela, trabajo, viajes o negocio.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#programas">Explorar programas <span class="arrow" aria-hidden="true">→</span></a>
             <button class="btn btn-secondary" type="button" data-open-guide>Ayúdame a elegir</button>
@@ -2366,6 +2632,78 @@
       </div>
     </section>
 
+    <section class="section location" id="ubicacion" aria-labelledby="location-title">
+      <div class="container">
+        <div class="location-heading reveal">
+          <div>
+            <p class="eyebrow">Visítanos</p>
+            <h2 id="location-title">Ubica Be Wise antes de tu <span class="text-accent">próxima clase.</span></h2>
+          </div>
+          <p class="section-lead">Recorre el mapa, acércate a las calles de la zona y abre una ruta desde tu ubicación cuando estés listo para visitarnos.</p>
+        </div>
+
+        <div class="location-card reveal">
+          <div class="location-panel">
+            <span class="location-symbol" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" focusable="false">
+                <path d="M20 10c0 5.4-8 11-8 11S4 15.4 4 10a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </span>
+            <p class="location-kicker">Punto de encuentro</p>
+            <h3>Be Wise English School</h3>
+            <p>Explora las calles cercanas e identifica referencias útiles antes de comenzar tu recorrido.</p>
+
+            <div class="location-details">
+              <div class="location-detail">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>
+                  <!-- <span class="location-detail-label">Coordenadas exactas</span>
+                  <span class="location-detail-value">19°48'30.0&quot;N · 100°53'53.7&quot;W</span> -->
+                  <span class="location-detail-label">Dirección</span>
+                  <span class="location-detail-value">Av. Albaro Obregón poniente #1484, Queréndaro Michoacán</span>
+                </span>
+              </div>
+              <div class="location-detail">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <path d="m3 6 5-2 8 3 5-2v13l-5 2-8-3-5 2V6Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8 4v13M16 7v13" stroke="currentColor" stroke-width="1.8"/>
+                </svg>
+                <span>
+                  <span class="location-detail-label">Mapa interactivo</span>
+                  <span class="location-detail-value">Arrastra, acerca y revisa los puntos de la zona.</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="location-actions">
+              <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=19.808333%2C-100.898250" target="_blank" rel="noopener noreferrer" aria-label="Cómo llegar a Be Wise English School en Google Maps">
+                Cómo llegar <span class="arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="btn btn-secondary" href="https://www.google.com/maps/@?api=1&amp;map_action=pano&amp;viewpoint=19.808333%2C-100.898250" target="_blank" rel="noopener noreferrer" aria-label="Abrir Street View cerca de Be Wise English School en Google Maps">
+                Street View <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <p class="location-note">Street View abrirá la panorámica más cercana disponible en Google Maps.</p>
+          </div>
+
+          <div class="location-map">
+            <iframe
+              title="Mapa interactivo de la ubicación de Be Wise English School"
+              src="https://maps.google.com/maps?q=19.808333%2C-100.898250&amp;z=17&amp;hl=es&amp;output=embed"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+            <span class="location-map-badge">Ubicación de la escuela</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="final-cta" aria-labelledby="cta-title">
       <div class="container">
         <div class="cta-card reveal">
@@ -2404,6 +2742,7 @@
             <li><a href="#metodo">Cómo aprenderás</a></li>
             <li><a href="#nosotros">Quiénes somos</a></li>
             <li><a href="#preguntas">Preguntas frecuentes</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
           </ul>
         </div>
 
